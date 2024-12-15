@@ -1,0 +1,51 @@
+{
+    "IMAGE_SHAPE": {
+        "width": 320,
+        "height": 240
+    },
+    "LANE_PREPROCESSING": {
+        "roi": {
+            "left": 0.1,
+            "right": 0.9,
+            "upper": 0.2,
+            "mid" : 0.5
+        },
+        "sobel_x_thres": [
+            25,
+            255
+        ],
+        "sobel_y_thres": [
+            110, 
+            250
+        ],
+        "red_thres": [
+            60,
+            255
+        ],
+        "adaptive_block_size": 41,
+        "adaptive_offset": -50,
+        "dilate_kernel": 3
+        },
+    "LANE_KEEPING": {
+        "middle_point": {
+            "longest_distance": 30
+        },
+        "anchor_step": -1,
+        "limit_sweep": -30, 
+        "step": -3,
+        "x_ratio": 0.8,
+        "y_ratio": 0.2,
+        "y_dist": 100,
+        "x_dist": 50,
+        "min_length": 50,
+        "middle_point_ratio": 0.5,
+        "angle_scale_ratio": 0.3
+        },
+    "INTERSECT_DETECTION": {
+            "crop_ratio": 0.5,
+            "minimum_points": 1,
+            "tolerance": 2,
+            "gap_thresh": 55,
+            "max_points_thresh": 250
+    }
+}
